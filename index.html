@@ -30,7 +30,7 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="hero-bg"></div>
-        <div class="container hero-container">
+        <div class="container hero-container animate-up">
             <div class="hero-text">
                 <h1>Diseño del Embalse Bollenar</h1>
                 <p>Asegurando el suministro de agua para la agricultura y fortaleciendo el desarrollo en la cuenca del Río Claro, comuna de Rengo.</p>
@@ -46,7 +46,7 @@
 
     <!-- Project Description -->
     <section id="proyecto" class="project-desc">
-        <div class="container">
+        <div class="container animate-up">
             <h2 class="section-title">Acerca del Proyecto</h2>
             <div class="project-grid">
                 <div class="card">
@@ -71,20 +71,55 @@
     <!-- Timeline Section -->
     <section id="cronograma" class="timeline-section">
         <div class="container">
-            <h2 class="section-title">Etapas del Estudio</h2>
+            <h2 class="section-title animate-up">Etapas del Estudio</h2>
             <p class="section-subtitle">Visualiza el avance del proyecto a través de sus fases clave.</p>
             
-            <div class="timeline" id="public-timeline-list">
+            <div class="timeline animate-up" id="public-timeline-list">
                 <!-- Se cargará dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Avances Audiovisuales Section -->
+    <section id="avances" class="avances" style="background: var(--bg-light); padding: 80px 0;">
+        <div class="container animate-up">
+            <h2 class="section-title">Avances en Terreno y Voces Oficiales</h2>
+            <p class="section-subtitle">Visualiza el progreso del estudio técnico y las declaraciones de las autoridades regionales sobre la viabilidad e impacto de este importante proyecto hídrico.</p>
+            
+            <div class="video-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px;">
+                <!-- Video 1: Seremi MOP -->
+                <div class="video-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+                    <iframe src="https://drive.google.com/file/d/1eUds5XTwtILUbEdcEgW2U3vGYowQO1mz/preview" style="width: 100%; aspect-ratio: 16/9; border: none; background: #000; display: block;" allow="autoplay" allowfullscreen></iframe>
+                    <div style="padding: 25px;">
+                        <h3 style="color: var(--primary); margin-bottom: 12px; font-size: 1.25rem; font-weight: 700;">Declaraciones Seremi MOP O'Higgins</h3>
+                        <p style="color: var(--text-dark); font-size: 0.95rem; line-height: 1.6; margin: 0;">Tras analizar los resultados preliminares del estudio técnico de ingeniería, la autoridad regional del Ministerio de Obras Públicas entrega sus impresiones sobre la viabilidad estratégica del Embalse Bollenar y su futuro impacto en el desarrollo agrícola y social de la comuna de Rengo.</p>
+                    </div>
+                </div>
+
+                <!-- Video 2: Sondajes -->
+                <div class="video-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+                    <iframe src="https://drive.google.com/file/d/1Hqx4k9xwxeWJZAb1FbraSqRUBf092lpw/preview" style="width: 100%; aspect-ratio: 16/9; border: none; background: #000; display: block;" allow="autoplay" allowfullscreen></iframe>
+                    <div style="padding: 25px;">
+                        <h3 style="color: var(--primary); margin-bottom: 12px; font-size: 1.25rem; font-weight: 700;">Trabajo de Sondajes Geotécnicos</h3>
+                        <p style="color: var(--text-dark); font-size: 0.95rem; line-height: 1.6; margin: 0;">Como parte fundamental de los estudios de terreno, el equipo especializado lleva a cabo labores de sondaje geológico en la cuenca. Estas extracciones subterráneas permiten determinar con máxima precisión las características del suelo, garantizando la estabilidad en el diseño estructural de la futura represa.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Meetings / Activities -->
     <section id="reuniones" class="meetings">
-        <div class="container">
+        <div class="container animate-up">
             <h2 class="section-title">Reuniones y Actividades</h2>
-            <div class="meetings-grid" id="public-meetings-list">
+            
+            <h3 style="margin-bottom: 20px; font-size: 1.5rem; color: var(--primary);">Próximas Reuniones</h3>
+            <div class="meetings-grid" id="upcoming-meetings-list" style="margin-bottom: 60px;">
+                <!-- Se cargará dinámicamente -->
+            </div>
+            
+            <h3 style="margin-bottom: 20px; font-size: 1.5rem; color: var(--primary);">Reuniones Pasadas</h3>
+            <div class="meetings-grid" id="past-meetings-list">
                 <!-- Se cargará dinámicamente -->
             </div>
         </div>

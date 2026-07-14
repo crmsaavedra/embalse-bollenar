@@ -12,18 +12,54 @@ window.currentMeetings = [
     {
         _id: "m1",
         title: "Reunión de Participación Ciudadana N°1",
-        date: "2024-05-15",
+        date: "2024-05-15T10:00:00",
         description: "Presentación inicial del proyecto a la comunidad, donde se resolvieron dudas generales sobre el diseño y ubicación del embalse Bollenar.",
-        imageUrl: "images/actividad1.jpg",
-        pdfUrl: null
+        images: [
+            "Reuniones/Reunion 1/Fotos/images (1).jpg",
+            "Reuniones/Reunion 1/Fotos/not7-30032021.jpg",
+            "Reuniones/Reunion 1/Fotos/ubicacion_1.png",
+            "Reuniones/Reunion 1/Fotos/ubicacion_2.png"
+        ],
+        pdfUrl: null,
+        driveUrl: null
+    },
+    {
+        _id: "m_feb",
+        title: "Reunión de Comunicaciones",
+        date: "2026-02-20T10:00:00",
+        description: "Reunión de coordinación y estrategia de comunicaciones del proyecto.",
+        images: [],
+        pdfUrl: null,
+        driveUrl: null
+    },
+    {
+        _id: "m_apr",
+        title: "Reunión Seremi MOP O'Higgins y PAC 02",
+        date: "2026-04-10T10:00:00",
+        description: "Reunión de trabajo con el Seremi del MOP y segunda etapa de Participación Ciudadana (PAC 02).",
+        images: [],
+        pdfUrl: null,
+        driveUrl: null
+    },
+    {
+        _id: "m_jun",
+        title: "Reunión Participación Ciudadana (PAC)",
+        date: "2026-06-04T10:00:00",
+        description: "Actividad de participación ciudadana y presentación de vocativos del proyecto.",
+        images: [],
+        pdfUrl: null,
+        driveUrl: null
     },
     {
         _id: "m2",
         title: "Mesa de Trabajo Técnica Ambiental",
-        date: "2024-08-10",
+        date: "2027-08-10T15:30:00",
         description: "Discusión técnica sobre los impactos ambientales y la protección de la flora local.",
-        imageUrl: "images/actividad2.jpg",
-        pdfUrl: null
+        images: [
+            "images/actividad2.jpg"
+        ],
+        pdfUrl: null,
+        driveUrl: null
     }
 ];
 
