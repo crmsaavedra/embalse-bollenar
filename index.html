@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño del Embalse Bollenar</title>
+    <meta name="description" content="Proyecto de Diseño del Embalse Bollenar, comuna de Rengo, Región del Libertador General Bernardo O'Higgins.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo">Embalse Bollenar</div>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#proyecto">El Proyecto</a>
+                <a href="#cronograma">Cronograma</a>
+                <a href="#reuniones">Actividades</a>
+                <a href="#contacto">Contacto</a>
+                <a href="https://juntavigilanciarioclaro.cl/" target="_blank" class="btn-primary">Junta de Vigilancia</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-container">
+            <div class="hero-text">
+                <h1>Diseño del Embalse Bollenar</h1>
+                <p>Asegurando el suministro de agua para la agricultura y fortaleciendo el desarrollo en la cuenca del Río Claro, comuna de Rengo.</p>
+                <a href="#proyecto" class="btn-secondary">Conocer más</a>
+            </div>
+            <div class="hero-video-wrapper">
+                <div class="video-container">
+                    <iframe src="https://drive.google.com/file/d/14LTtGyl5lCTEaeG9zUpaeEb_b-swGtL6/preview" width="640" height="480" allow="autoplay" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Description -->
+    <section id="proyecto" class="project-desc">
+        <div class="container">
+            <h2 class="section-title">Acerca del Proyecto</h2>
+            <div class="project-grid">
+                <div class="card">
+                    <div class="card-icon">💧</div>
+                    <h3>Desafío Hídrico</h3>
+                    <p>El régimen pluvio-nival del río Claro provoca una disminución de caudales en verano, afectando la disponibilidad de agua para riego en los períodos de mayor demanda agrícola.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Alcances</h3>
+                    <p>Embalse con volumen total de 59 Hm³ y 143 Ha de área de inundación. Sustentará 5.975 acciones de la Junta de Vigilancia del Río Claro (equivalencia de 2,5 l/s).</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🌱</div>
+                    <h3>Beneficios</h3>
+                    <p>Seguridad de riego, control de crecidas, respaldo a Servicios Sanitarios Rurales (SSR), apoyo en combate a incendios forestales y fomento al desarrollo turístico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="cronograma" class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">Etapas del Estudio</h2>
+            <p class="section-subtitle">Visualiza el avance del proyecto a través de sus fases clave.</p>
+            
+            <div class="timeline" id="public-timeline-list">
+                <!-- Se cargará dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Meetings / Activities -->
+    <section id="reuniones" class="meetings">
+        <div class="container">
+            <h2 class="section-title">Reuniones y Actividades</h2>
+            <div class="meetings-grid" id="public-meetings-list">
+                <!-- Se cargará dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Contact -->
+    <footer id="contacto" class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <h2>Contacto</h2>
+                <p>Para más información, consultas o sugerencias sobre el proyecto, puede comunicarse a través del siguiente correo institucional:</p>
+                <a href="mailto:contactobollenar@typsa.es" class="email-link">✉ contactobollenar@typsa.es</a>
+                <p class="footer-note">Más información puede consultar al siguiente correo: <strong>contactobollenar@typsa.es</strong></p>
+                <div class="footer-links">
+                    <a href="https://juntavigilanciarioclaro.cl/" target="_blank" class="external-link">Visitar Junta de Vigilancia de Rengo ↗</a>
+                </div>
+            </div>
+            <div class="footer-map">
+                <img src="images/ubicacion_1.png" alt="Ubicación del Embalse Bollenar" class="location-img">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Diseño del Embalse Bollenar. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
