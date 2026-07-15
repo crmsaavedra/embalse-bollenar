@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
             date: "2024-05-15T10:00:00",
             description: "Presentación inicial del proyecto a la comunidad, donde se resolvieron dudas generales sobre el diseño y ubicación del embalse Bollenar.",
             images: [
-                "Reuniones/Reunion 1/Fotos/images (1).jpg",
-                "Reuniones/Reunion 1/Fotos/not7-30032021.jpg",
-                "Reuniones/Reunion 1/Fotos/ubicacion_1.png",
-                "Reuniones/Reunion 1/Fotos/ubicacion_2.png"
+                "Reuniones/Reunion 1/Fotos/IMG_8598.webp",
+                "Reuniones/Reunion 1/Fotos/IMG_8599.webp",
+                "Reuniones/Reunion 1/Fotos/IMG_8600.webp",
+                "Reuniones/Reunion 1/Fotos/IMG_8621.webp"
             ],
             documents: [
                 { name: "Comunicado Reunión 1", url: "Reuniones/Reunion 1/Comuicado reunion1.docx" },
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Reunión de Comunicaciones",
             date: "2026-02-20T10:00:00",
             description: "Reunión de coordinación y estrategia de comunicaciones del proyecto.",
-            images: [],
+            images: ["images/ubicacion_1.png"],
             documents: [
                 { name: "Acta de reunión 20 febrero", url: "Reuniones/Reunion Comunicaciones (Febrero 2026)/Acta de reunión 20 febrero. Comunicaciones .pdf" }
             ]
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Reunión Seremi MOP O'Higgins y PAC 02",
             date: "2026-04-10T10:00:00",
             description: "Reunión de trabajo con el Seremi del MOP y segunda etapa de Participación Ciudadana (PAC 02).",
-            images: [],
+            images: ["images/ubicacion_1.png"],
             documents: [
                 { name: "Acta PAC 02", url: "Reuniones/Reunion PAC 02 (Abril 2026)/Acta PAC 02 10-04-2026.doc" },
                 { name: "Asistencia Reunión Seremi MOP", url: "Reuniones/Reunion PAC 02 (Abril 2026)/Asistencia reunión seremi Mop O_Higgins 10-04-2026.pdf" }
@@ -53,7 +53,19 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Reunión Participación Ciudadana (PAC)",
             date: "2026-06-04T10:00:00",
             description: "Actividad de participación ciudadana y presentación de vocativos del proyecto.",
-            images: [],
+            images: [
+                "Reuniones/Reunion PAC (Junio 2026)/Fotos/IMG_9655.webp",
+                "Reuniones/Reunion PAC (Junio 2026)/Fotos/IMG_9661.webp",
+                "Reuniones/Reunion PAC (Junio 2026)/Fotos/IMG_9672.webp",
+                "Reuniones/Reunion PAC (Junio 2026)/Fotos/IMG_9674.webp",
+                "Reuniones/Reunion PAC (Junio 2026)/Fotos/IMG_9675.webp",
+                "Reuniones/Reunion PAC (Junio 2026)/Fotos/IMG_9676.webp",
+                "Reuniones/Reunion PAC (Junio 2026)/Fotos/IMG_9677.webp",
+                "Reuniones/Reunion PAC (Junio 2026)/Fotos/IMG_9678.webp",
+                "Reuniones/Reunion PAC (Junio 2026)/Fotos/IMG_9681.webp",
+                "Reuniones/Reunion PAC (Junio 2026)/Fotos/IMG_9696.webp",
+                "Reuniones/Reunion PAC (Junio 2026)/Fotos/IMG_9697.webp"
+            ],
             documents: [
                 { name: "Programa y Vocativos PAC", url: "Reuniones/Reunion PAC (Junio 2026)/Programa y Vocativos PAC 04-06-2026.docx" }
             ]
@@ -164,11 +176,23 @@ document.addEventListener('DOMContentLoaded', () => {
             if (meeting.images && meeting.images.length > 0) {
                 galleryHtml = '<div class="meeting-gallery">';
                 meeting.images.forEach((img, index) => {
-                    galleryHtml += `<a href="#" onclick="openLightbox('${meeting._id}', ${index}, event)"><img src="${img}" alt="${meeting.title}" class="gallery-img"></a>`;
+                    if (index < 3) {
+                        galleryHtml += `<a href="#" onclick="openLightbox('${meeting._id}', ${index}, event)"><img src="${img}" alt="${meeting.title}" class="gallery-img" loading="lazy" decoding="async"></a>`;
+                    } else if (index === 3) {
+                        if (meeting.images.length > 4) {
+                            const extraCount = meeting.images.length - 4;
+                            galleryHtml += `<a href="#" onclick="openLightbox('${meeting._id}', ${index}, event)" style="position: relative; display: block; overflow: hidden;">
+                                <img src="${img}" alt="${meeting.title}" class="gallery-img" loading="lazy" decoding="async">
+                                <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem; border-radius: 8px;">+${extraCount} fotos</div>
+                            </a>`;
+                        } else {
+                            galleryHtml += `<a href="#" onclick="openLightbox('${meeting._id}', ${index}, event)"><img src="${img}" alt="${meeting.title}" class="gallery-img" loading="lazy" decoding="async"></a>`;
+                        }
+                    }
                 });
                 galleryHtml += '</div>';
             } else {
-                galleryHtml = `<div class="meeting-gallery"><a href="#" onclick="openLightbox('${meeting._id}', 0, event)"><img src="images/ubicacion_1.png" alt="${meeting.title}" class="gallery-img"></a></div>`;
+                galleryHtml = `<div class="meeting-gallery"><a href="#" onclick="openLightbox('${meeting._id}', 0, event)"><img src="images/ubicacion_1.webp" alt="${meeting.title}" class="gallery-img" loading="lazy" decoding="async"></a></div>`;
             }
 
             const cardHtml = `
@@ -241,6 +265,25 @@ window.openLightbox = function(meetingId, index, event) {
     currentLightboxImages = (meeting && meeting.images && meeting.images.length > 0) ? meeting.images : ["images/ubicacion_1.png"];
     currentLightboxIndex = index;
     
+    updateLightboxImage();
+    document.getElementById('gallery-lightbox').classList.add('active');
+};
+
+const sondajesImages = [
+    "Reuniones/Fotos sondajes febrero 2026/IMG_8871.webp",
+    "Reuniones/Fotos sondajes febrero 2026/IMG_8874.webp",
+    "Reuniones/Fotos sondajes febrero 2026/IMG_8875.webp",
+    "Reuniones/Fotos sondajes febrero 2026/IMG_8878.webp",
+    "Reuniones/Fotos sondajes febrero 2026/IMG_8879.webp",
+    "Reuniones/Fotos sondajes febrero 2026/IMG_8884.webp",
+    "Reuniones/Fotos sondajes febrero 2026/IMG_8886.webp",
+    "Reuniones/Fotos sondajes febrero 2026/IMG_8889.webp"
+];
+
+window.openSondajesLightbox = function(index, event) {
+    event.preventDefault();
+    currentLightboxImages = sondajesImages;
+    currentLightboxIndex = index;
     updateLightboxImage();
     document.getElementById('gallery-lightbox').classList.add('active');
 };
