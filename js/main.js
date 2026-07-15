@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 galleryHtml += '</div>';
             } else {
-                galleryHtml = `<div class="meeting-gallery"><a href="#" onclick="openLightbox('${meeting._id}', 0, event)"><img src="images/ubicacion_1.webp" alt="${meeting.title}" class="gallery-img" loading="lazy" decoding="async"></a></div>`;
+                galleryHtml = `<div class="meeting-gallery"><a href="#" onclick="openLightbox('${meeting._id}', 0, event)"><img src="images/ubicacion_1.png" alt="${meeting.title}" class="gallery-img" loading="lazy" decoding="async"></a></div>`;
             }
 
             const cardHtml = `
