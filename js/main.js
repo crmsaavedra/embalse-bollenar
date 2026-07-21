@@ -13,36 +13,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const mockMeetings = [
         {
             _id: "m1",
-            title: "Reunión de Participación Ciudadana N°1",
-            date: "2024-05-15T10:00:00",
-            description: "Presentación inicial del proyecto a la comunidad, donde se resolvieron dudas generales sobre el diseño y ubicación del embalse Bollenar.",
+            title: "Reunión Interinstitucional",
+            date: "2026-01-06T00:00:00",
+            description: "Se presentó el proyecto a autoridades y encargados de distintso servicios públicos, donde se resolvieron dudas generales sobre el diseño.",
             images: [
                 "Reuniones/Reunion 1/Fotos/IMG_8598.webp",
                 "Reuniones/Reunion 1/Fotos/IMG_8599.webp",
                 "Reuniones/Reunion 1/Fotos/IMG_8600.webp",
                 "Reuniones/Reunion 1/Fotos/IMG_8621.webp"
             ],
-            documents: [
-                { name: "Comunicado Reunión 1", url: "Reuniones/Reunion 1/Comuicado reunion1.docx" },
-                { name: "Comunicado: Embalse Bollenar Avanza", url: "Reuniones/Reunion 1/Comunicado_ Embalse Bollenar avanza_fue.docx" }
-            ]
-        },
-        {
-            _id: "m_feb",
-            title: "Reunión de Comunicaciones",
-            date: "2026-02-20T10:00:00",
-            description: "Reunión de coordinación y estrategia de comunicaciones del proyecto.",
-            images: ["images/ubicacion_1.png"],
-            documents: [
-                { name: "Acta de reunión 20 febrero", url: "Reuniones/Reunion Comunicaciones (Febrero 2026)/Acta de reunión 20 febrero. Comunicaciones .pdf" }
-            ]
+            documents: []
         },
         {
             _id: "m_apr",
             title: "Reunión Seremi MOP O'Higgins y PAC 02",
-            date: "2026-04-10T10:00:00",
+            date: "2026-04-10T00:00:00",
             description: "Reunión de trabajo con el Seremi del MOP y segunda etapa de Participación Ciudadana (PAC 02).",
-            images: ["images/ubicacion_1.png"],
+            images: [
+                "Reuniones/Reunion PAC 02 (Abril 2026)/Fotos/Exposición del estudio de diseño.JPG",
+                "Reuniones/Reunion PAC 02 (Abril 2026)/Fotos/Reunión informativa.JPG",
+                "Reuniones/Reunion PAC 02 (Abril 2026)/Fotos/Seremi MOP y equipo de trabajo en estudio de diseño.jpg",
+                "Reuniones/Reunion PAC 02 (Abril 2026)/Fotos/Temas en exposición.JPG"
+            ],
             documents: [
                 { name: "Acta PAC 02", url: "Reuniones/Reunion PAC 02 (Abril 2026)/Acta PAC 02 10-04-2026.doc" },
                 { name: "Asistencia Reunión Seremi MOP", url: "Reuniones/Reunion PAC 02 (Abril 2026)/Asistencia reunión seremi Mop O_Higgins 10-04-2026.pdf" }
@@ -51,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             _id: "m_jun",
             title: "Reunión Participación Ciudadana (PAC)",
-            date: "2026-06-04T10:00:00",
-            description: "Actividad de participación ciudadana y presentación de vocativos del proyecto.",
+            date: "2026-06-04T00:00:00",
+            description: "<strong>Participación ciudadana en Rengo reunió a la comunidad para conocer los avances del Estudio de Diseño del Embalse Bollenar</strong><br><br>El pasado 4 de junio, en la comuna de Rengo, se desarrolló una nueva jornada de Participación Ciudadana en el marco del Estudio de Diseño del Embalse Bollenar, instancia que convocó a vecinos, regantes, autoridades y representantes de organizaciones locales para conocer los avances del proyecto y resolver inquietudes de la comunidad.<br><br>La actividad, impulsada como parte del proceso de participación contemplado en el estudio, permitió presentar el estado de avance de las distintas especialidades técnicas que se encuentran en desarrollo, además de informar sobre las campañas de terreno, estudios ambientales, geológicos e hidrológicos que contribuirán a definir el diseño definitivo de la futura infraestructura.<br><br>Durante la jornada, los asistentes pudieron conocer los objetivos del proyecto, los beneficios esperados para la seguridad hídrica del valle del río Claro y el fortalecimiento de la actividad agrícola de la zona, además de plantear consultas y observaciones que fueron respondidas por el equipo profesional a cargo del estudio.<br><br>El proceso de participación ciudadana constituye un componente fundamental del desarrollo del proyecto, ya que busca incorporar las opiniones de la comunidad, promover el diálogo transparente y mantener informados a los distintos actores del territorio sobre el avance de una iniciativa estratégica para la Región de O'Higgins.<br><br>El Embalse Bollenar forma parte de las obras priorizadas por el Ministerio de Obras Públicas para fortalecer la seguridad hídrica de la cuenca del río Claro. Actualmente, el proyecto se encuentra en su etapa de diseño, que contempla estudios técnicos, ambientales y actividades de participación ciudadana que se extenderán durante el desarrollo de la ingeniería de detalle.",
             images: [
                 "Reuniones/Reunion PAC (Junio 2026)/Fotos/IMG_9655.webp",
                 "Reuniones/Reunion PAC (Junio 2026)/Fotos/IMG_9661.webp",
@@ -67,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Reuniones/Reunion PAC (Junio 2026)/Fotos/IMG_9697.webp"
             ],
             documents: [
-                { name: "Programa y Vocativos PAC", url: "Reuniones/Reunion PAC (Junio 2026)/Programa y Vocativos PAC 04-06-2026.docx" }
+                { name: "Comunicado de prensa", url: "Reuniones/Reunion PAC (Junio 2026)/Comunicado Reunión Pac 4 de junio.docx" }
             ]
         }
     ];
@@ -138,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mockMeetings.forEach(meeting => {
             const meetingDate = new Date(meeting.date);
             const dateStr = meetingDate.toLocaleDateString('es-ES', {
-                year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'
+                year: 'numeric', month: 'long', day: 'numeric'
             });
 
             // Generar HTML de Documentos (Formato Fichero)
