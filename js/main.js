@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Reuniones/Reunion 1/Fotos/IMG_8621.webp"
             ],
             documents: [
-                { name: "Comunicado", url: "Reuniones/Reunion 1/Comuicado reunion1.docx" }
+                { name: "Comunicado de Prensa", url: "Reuniones/Reunion 1/Comuicado reunion1.docx" }
             ]
         },
         {
