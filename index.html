@@ -15,14 +15,17 @@
 <body>
     <!-- Navbar -->
     <header class="navbar">
+        <div style="height: 6px; width: 100%; display: flex; position: absolute; top: 0; left: 0;">
+            <div style="background-color: #0033a0; width: 50%;"></div>
+            <div style="background-color: #d52b1e; width: 50%;"></div>
+        </div>
         <div class="container nav-content">
-            <div class="logo">Embalse Bollenar</div>
-            <div class="institutional-logos" style="display: flex; gap: 15px; align-items: center; margin-left: 20px;">
+            <div class="logo" style="margin-top: 6px;">Diseño Embalse Bollenar</div>
+            <div class="institutional-logos" style="display: flex; gap: 15px; align-items: center; margin-left: 20px; margin-top: 6px;">
                 <img src="images/Logos/new_logo_1.jpg" alt="DOH" style="height: 40px; width: auto;">
                 <img src="images/Logos/new_logo_2.png" alt="MOP" style="height: 40px; width: auto;">
-                <img src="images/Logos/new_logo_3.jpg" alt="Typsa" style="height: 35px; width: auto;">
             </div>
-            <nav>
+            <nav style="margin-top: 6px;">
                 <a href="#inicio">Inicio</a>
                 <a href="#proyecto">El Proyecto</a>
                 <a href="#cronograma">Cronograma</a>
@@ -61,7 +64,7 @@
                 <div class="card">
                     <div class="card-icon">💧</div>
                     <h3>Desafío Hídrico</h3>
-                    <p>El régimen pluvio-nival del río Claro provoca una disminución de caudales en verano, afectando la disponibilidad de agua para riego en los períodos de mayor demanda agrícola.</p>
+                    <p>La cuenca del Río Claro enfrenta un escenario complejo de déficit hídrico. Este estudio busca generar una infraestructura de acumulación capaz de asegurar el abastecimiento de riego y entregar sustentabilidad al valle.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon">🎯</div>
@@ -69,28 +72,28 @@
                     <p>Embalse con volumen total de 59 Hm³ y 143 Ha de área de inundación. Sustentará 5.975 acciones de la Junta de Vigilancia del Río Claro (equivalencia de 2,5 l/s).</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon">🌱</div>
-                    <h3>Beneficios</h3>
-                    <p>Seguridad de riego, control de crecidas, respaldo a Servicios Sanitarios Rurales (SSR), apoyo en combate a incendios forestales y fomento al desarrollo turístico.</p>
+                    <div class="card-icon">🏗️</div>
+                    <h3>Infraestructura</h3>
+                    <p>Muro principal de tierra de 76m de alto, evacuador de crecidas para eventos extremos, y obras de desvío con túnel de 525m de longitud y 4m de diámetro.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Timeline Section -->
-    <section id="cronograma" class="timeline-section">
-        <div class="container">
-            <h2 class="section-title animate-up">Etapas del Estudio</h2>
-            <p class="section-subtitle">Visualiza el avance del proyecto a través de sus fases clave.</p>
+    <section id="cronograma" class="timeline-section" style="background: var(--bg-light); padding: 80px 0;">
+        <div class="container animate-up">
+            <h2 class="section-title">Cronograma del Estudio de Diseño</h2>
+            <p class="section-subtitle">Visualiza el progreso de las distintas fases técnicas que componen la etapa de diseño de ingeniería para el Embalse Bollenar.</p>
             
-            <div class="timeline animate-up" id="public-timeline-list">
-                <!-- Se cargará dinámicamente -->
+            <div id="public-timeline-list" class="timeline">
+                <!-- Se llenará dinámicamente con JS -->
             </div>
         </div>
     </section>
 
-    <!-- Avances Audiovisuales Section -->
-    <section id="avances" class="avances" style="background: var(--bg-light); padding: 80px 0;">
+    <!-- Avances y Voces Oficiales -->
+    <section id="avances" class="avances" style="background: #fff; padding: 80px 0;">
         <div class="container animate-up">
             <h2 class="section-title">Avances en Terreno y Voces Oficiales</h2>
             <p class="section-subtitle">Visualiza el progreso del estudio técnico y las declaraciones de las autoridades regionales sobre la viabilidad e impacto de este importante proyecto hídrico.</p>
@@ -111,30 +114,32 @@
                         <a href="#" onclick="openSondajesLightbox(0, event)" style="display: block; overflow: hidden;"><img src="Reuniones/Fotos sondajes febrero 2026/IMG_8871.JPG" alt="Sondaje 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></a>
                         <a href="#" onclick="openSondajesLightbox(1, event)" style="display: block; overflow: hidden;"><img src="Reuniones/Fotos sondajes febrero 2026/IMG_8874.JPG" alt="Sondaje 2" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></a>
                         <a href="#" onclick="openSondajesLightbox(2, event)" style="display: block; overflow: hidden;"><img src="Reuniones/Fotos sondajes febrero 2026/IMG_8875.JPG" alt="Sondaje 3" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></a>
-                        <a href="#" onclick="openSondajesLightbox(3, event)" style="display: block; overflow: hidden; position: relative;"><img src="Reuniones/Fotos sondajes febrero 2026/IMG_8878.JPG" alt="Sondaje 4" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                            <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">+5 fotos</div>
+                        <a href="#" onclick="openSondajesLightbox(3, event)" style="display: block; overflow: hidden; position: relative;">
+                            <img src="Reuniones/Fotos sondajes febrero 2026/IMG_8884.JPG" alt="Sondaje 4" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: bold; font-size: 1.2rem; transition: background 0.3s;" onmouseover="this.style.background='rgba(0,0,0,0.6)'" onmouseout="this.style.background='rgba(0,0,0,0.4)'">
+                                +3
+                            </div>
                         </a>
                     </div>
                     <div style="padding: 25px;">
-                        <h3 style="color: var(--primary); margin-bottom: 12px; font-size: 1.25rem; font-weight: 700;">Galería: Trabajo de Sondajes Geotécnicos</h3>
-                        <p style="color: var(--text-dark); font-size: 0.95rem; line-height: 1.6; margin: 0;">Registro fotográfico de las labores de sondaje geológico en la cuenca. Estas extracciones subterráneas permiten determinar con máxima precisión las características del suelo, garantizando la estabilidad en el diseño estructural de la futura represa.</p>
+                        <h3 style="color: var(--primary); margin-bottom: 12px; font-size: 1.25rem; font-weight: 700;">Avance de Sondajes Geotécnicos</h3>
+                        <p style="color: var(--text-dark); font-size: 0.95rem; line-height: 1.6; margin: 0;">Registro visual de las campañas de sondajes y calicatas realizadas en febrero de 2026. Estos trabajos de campo son fundamentales para caracterizar la geología y la mecánica de suelos en la zona donde se proyecta el emplazamiento del muro y las obras anexas.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Meetings / Activities -->
-    <section id="reuniones" class="meetings">
+    <!-- Meetings Section -->
+    <section id="reuniones" class="meetings-section">
         <div class="container animate-up">
-            <h2 class="section-title">Reuniones y Actividades</h2>
+            <h2 class="section-title">Actividades y Participación Ciudadana</h2>
             
-            <h3 style="margin-bottom: 20px; font-size: 1.5rem; color: var(--primary);">Próximas Reuniones</h3>
-            <div class="meetings-grid" id="upcoming-meetings-list" style="margin-bottom: 60px;">
-                <!-- Se cargará dinámicamente -->
+            <div id="upcoming-meetings-list" class="meetings-grid" style="margin-bottom: 50px;">
+                <!-- Se llenará con JS -->
             </div>
             
-            <h3 style="margin-bottom: 20px; font-size: 1.5rem; color: var(--primary);">Reuniones Pasadas</h3>
+            <h3 style="margin-bottom: 20px; font-size: 1.5rem; color: var(--primary);">Reuniones Anteriores</h3>
             <div class="meetings-grid" id="past-meetings-list">
                 <!-- Se cargará dinámicamente -->
             </div>

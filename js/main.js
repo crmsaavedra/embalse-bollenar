@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // MOCK DATA PARA GITHUB PAGES (SIN BASE DE DATOS)
     const mockStages = [
-        { stageId: 1, title: "Evaluación Preliminar", description: "Evaluación preliminar de viabilidad técnica y económica.", status: "completed" },
-        { stageId: 2, title: "Desarrollo de Diseños", description: "Se desarrollan y optimizan los diseños para determinar los costos y beneficios esperados y la mejor alternativa de proyecto.", status: "completed" },
-        { stageId: 3, title: "Planos y Detalles", description: "Se realizan los planos de detalles constructivos y documentación para la construcción.", status: "active" },
-        { stageId: 4, title: "Calificación Ambiental", description: "Obtención de la Resolución de Calificación Ambiental favorable para el proyecto.", status: "pending" },
-        { stageId: 5, title: "Construcción", description: "Materialización de las Obras.", status: "pending" },
-        { stageId: 6, title: "Operación", description: "Puesta en Operación y mantención del embalse.", status: "pending" }
+        { stageId: 1, title: "Evaluación Preliminar", description: "Evaluación de viabilidad técnica y económica. Incluye topografía, hidrología básica y geología preliminar.", status: "completed" },
+        { stageId: 2, title: "Desarrollo de Diseños", description: "Se desarrollan y optimizan los diseños para determinar la mejor alternativa. Contempla mecánica de suelos, diseño de obras y estudios ambientales.", status: "completed" },
+        { stageId: 3, title: "Planos y Detalles", description: "Ingeniería de detalle, planos de construcción, especificaciones técnicas y presupuesto oficial.", status: "active" },
+        { stageId: 4, title: "Calificación Ambiental", description: "Elaboración del Estudio de Impacto Ambiental (EIA) y proceso formal de participación ciudadana.", status: "pending" },
+        { stageId: 5, title: "Construcción", description: "Licitación, ejecución material de las obras y aplicación de planes de mitigación.", status: "pending" },
+        { stageId: 6, title: "Operación", description: "Puesta en marcha, proceso de llenado del embalse y entrega de la obra para su mantención.", status: "pending" }
     ];
 
     const mockMeetings = [
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             _id: "m_apr",
-            title: "Reunión Seremi MOP O'Higgins y PAC 02",
+            title: "Reunión Seremi MOP O'Higgins",
             date: "2026-04-10T00:00:00",
             description: "Reunión de trabajo con el Seremi del MOP y segunda etapa de Participación Ciudadana (PAC 02).",
             images: [
@@ -38,8 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Reuniones/Reunion PAC 02 (Abril 2026)/Fotos/Temas en exposición.JPG"
             ],
             documents: [
-                { name: "Acta PAC 02", url: "Reuniones/Reunion PAC 02 (Abril 2026)/Acta PAC 02 10-04-2026.doc" },
-                { name: "Asistencia Reunión Seremi MOP", url: "Reuniones/Reunion PAC 02 (Abril 2026)/Asistencia reunión seremi Mop O_Higgins 10-04-2026.pdf" }
+                { name: "Comunicado de prensa", url: "#" }
             ]
         },
         {
