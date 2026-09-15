@@ -718,6 +718,10 @@ nav a:hover {
         height: 65px !important;
     }
 
+    .nav-brand {
+        gap: 12px !important;
+    }
+
     .logo {
         font-size: 1.3rem;
     }
@@ -852,9 +856,16 @@ nav a:hover {
     .institutional-logos img {
         height: 55px !important;
     }
+    
+    .nav-brand {
+        gap: 8px !important;
+        flex-wrap: wrap;
+    }
 
     .logo {
         font-size: 1.15rem;
+        white-space: normal !important;
+        line-height: 1.2;
     }
 
     .hero {
