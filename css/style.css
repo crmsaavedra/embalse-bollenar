@@ -89,7 +89,7 @@ a {
 
 .logo {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: var(--primary);
     letter-spacing: -0.5px;
@@ -719,7 +719,7 @@ nav a:hover {
     }
 
     .logo {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     /* Nav becomes a dropdown */
@@ -854,7 +854,7 @@ nav a:hover {
     }
 
     .logo {
-        font-size: 0.95rem;
+        font-size: 1.15rem;
     }
 
     .hero {
