@@ -85,6 +85,10 @@ a {
     justify-content: space-between;
     align-items: center;
     min-height: 115px;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
 .logo {
