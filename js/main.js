@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Reuniones/Reunion PAC 02 (Abril 2026)/Fotos/Temas en exposición.JPG"
             ],
             documents: [
-                { name: "Comunicado de prensa", url: "#" }
+                { name: "Comunicado de prensa", url: "Reuniones/Reunion 1/Comunicado_ Embalse Bollenar avanza_fue.docx" }
             ]
         },
         {
