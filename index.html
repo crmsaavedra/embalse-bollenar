@@ -25,12 +25,15 @@
                 <img src="images/Logos/new_logo_2.png" alt="MOP" style="height: 70px; width: auto;">
             </div>
             <div class="logo" style="margin-top: 6px;">Diseño Embalse Bollenar</div>
+            <button class="hamburger" onclick="document.querySelector('nav').classList.toggle('nav-open')" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
             <nav style="margin-top: 6px;">
-                <a href="#inicio">Inicio</a>
-                <a href="#proyecto">El Proyecto</a>
-                <a href="#cronograma">Cronograma</a>
-                <a href="#reuniones">Actividades</a>
-                <a href="#contacto">Contacto</a>
+                <a href="#inicio" onclick="document.querySelector('nav').classList.remove('nav-open')">Inicio</a>
+                <a href="#proyecto" onclick="document.querySelector('nav').classList.remove('nav-open')">El Proyecto</a>
+                <a href="#cronograma" onclick="document.querySelector('nav').classList.remove('nav-open')">Cronograma</a>
+                <a href="#reuniones" onclick="document.querySelector('nav').classList.remove('nav-open')">Actividades</a>
+                <a href="#contacto" onclick="document.querySelector('nav').classList.remove('nav-open')">Contacto</a>
                 <a href="https://jvrengo.cl/" target="_blank" class="btn-primary" style="display: inline-flex; align-items: center; gap: 10px;">
                     <img src="rengo.png" alt="Logo Junta de Vigilancia" style="height: 32px; width: auto; object-fit: contain;">
                     Junta de Vigilancia
