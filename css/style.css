@@ -77,13 +77,14 @@ a {
     border-bottom: 1px solid var(--border);
     z-index: 1000;
     transition: var(--transition);
+    padding: 8px 0;
 }
 
 .nav-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 72px;
+    min-height: 90px;
 }
 
 .logo {
@@ -130,7 +131,7 @@ nav a:hover {
    ========================================================================== */
 .hero {
     position: relative;
-    padding: 160px 0 100px;
+    padding: 180px 0 100px;
     background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
     overflow: hidden;
 }
