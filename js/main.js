@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { stageId: 2, title: "Trabajos en terreno", description: "Actualmente, se realiza la campaña geotécnica -sondajes y calicatas- y la topográfica, con tecnología de teledetección que utiliza pulsos de luz láser para medir distancias y crear mapas en 3D de alta precisión de la superficie terrestre. Además de levantamiento de la zona de presa y obras.", status: "active" },
         { stageId: 3, title: "Desarrollo de Diseños", description: "Se desarrollan y optimizan los diseños para determinar la mejor alternativa. Contempla mecánica de suelos, diseño de obras y estudios ambientales.", status: "pending" },
         { stageId: 4, title: "Planos y Detalles", description: "Ingeniería de detalle, planos de construcción, especificaciones técnicas y presupuesto oficial.", status: "pending" },
-        { stageId: 5, title: "Calificación Ambiental", description: "Elaboración del Estudio de Impacto Ambiental, nuevo proceso de participación ciudadana y obtención de la Resolución de Calificación Ambiental Favorable.", status: "pending" },
+        { stageId: 5, title: "Calificación Ambiental", description: "Elaboración del Estudio de Impacto Ambiental.<br>Nuevo proceso de participación ciudadana y obtención de la Resolución de Calificación Ambiental Favorable.", status: "pending" },
         { stageId: 6, title: "Construcción", description: "Licitación, ejecución material de las obras y aplicación de planes de mitigación.", status: "pending" },
         { stageId: 7, title: "Operación", description: "Puesta en marcha, proceso de llenado del embalse y entrega de la obra para su mantención.", status: "pending" }
     ];
