@@ -401,6 +401,47 @@ nav a:hover {
     border-color: var(--secondary);
 }
 
+.meeting-card-featured {
+    grid-column: 1 / -1;
+    height: auto;
+}
+
+.meeting-media-featured {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
+    gap: 16px;
+    padding: 16px;
+    background: #eaf4f8;
+}
+
+.meeting-media-featured video {
+    display: block;
+    width: 100%;
+    height: 360px;
+    object-fit: contain;
+    background: var(--text-dark);
+    border-radius: var(--radius-md);
+}
+
+.meeting-media-featured .meeting-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    height: 360px;
+    min-width: 0;
+}
+
+.meeting-media-featured .meeting-gallery a,
+.meeting-media-featured .meeting-gallery a:only-child {
+    height: auto;
+    min-height: 0;
+}
+
+.meeting-media-featured .gallery-img {
+    display: block;
+}
+
 .meeting-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -771,6 +812,18 @@ nav a:hover {
     /* Project cards */
     .project-grid, .meetings-grid {
         grid-template-columns: 1fr;
+    }
+
+    .meeting-media-featured {
+        grid-template-columns: 1fr;
+    }
+
+    .meeting-media-featured video {
+        height: min(70vh, 480px);
+    }
+
+    .meeting-media-featured .meeting-gallery {
+        height: 280px;
     }
 
     .card {

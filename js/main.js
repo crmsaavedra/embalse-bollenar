@@ -13,6 +13,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const mockMeetings = [
         {
+            _id: "m_popeta",
+            title: "Reunión informativa en Popeta",
+            location: "Popeta, Rengo",
+            description: "<strong>Comunidad de Popeta conoció los avances del Diseño del Embalse Bollenar</strong><br><br>Más de 80 personas participaron en una reunión informativa organizada por la Junta de Vigilancia de la Primera Sección del río Claro y el Comité Río Claro de Popeta. Asistieron representantes del Ministerio de Obras Públicas, la Dirección de Obras Hidráulicas, la Municipalidad de Rengo y TYPSA.<br><br>En la jornada se informó que el contrato de diseño registraba un 42% de avance. Los asistentes pudieron plantear inquietudes y conocer los alcances del proyecto, incluidos el riego, el cuidado del agua y las oportunidades para el turismo local. El comunicado de prensa recoge las intervenciones de Álvaro Paredes, Jimmy Jorquera, Juan Inostroza y Gloria Vargas.",
+            images: [
+                "Reuniones/Reunion Popeta (2026)/Fotos/IMG_0143.webp",
+                "Reuniones/Reunion Popeta (2026)/Fotos/IMG_0146.webp",
+                "Reuniones/Reunion Popeta (2026)/Fotos/IMG_0180.webp",
+                "Reuniones/Reunion Popeta (2026)/Fotos/IMG_0197.webp",
+                "Reuniones/Reunion Popeta (2026)/Fotos/IMG_0200.webp",
+                "Reuniones/Reunion Popeta (2026)/Fotos/IMG_0214.webp"
+            ],
+            video: "Reuniones/Reunion Popeta (2026)/reel.mp4",
+            poster: "Reuniones/Reunion Popeta (2026)/reel-poster.jpg",
+            documents: [
+                { name: "Comunicado de prensa", url: "Reuniones/Reunion Popeta (2026)/Comunicado Bollenar_fue.docx" }
+            ]
+        },
+        {
             _id: "m1",
             title: "Reunión Interinstitucional",
             date: "2026-01-06T00:00:00",
@@ -130,10 +149,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const now = new Date();
 
         mockMeetings.forEach(meeting => {
-            const meetingDate = new Date(meeting.date);
-            const dateStr = meetingDate.toLocaleDateString('es-ES', {
+            const meetingDate = meeting.date ? new Date(meeting.date) : null;
+            const dateStr = meetingDate ? meetingDate.toLocaleDateString('es-ES', {
                 year: 'numeric', month: 'long', day: 'numeric'
-            });
+            }) : '';
+            const meetingMeta = [
+                dateStr ? `<span>📅 ${dateStr}</span>` : '',
+                meeting.location ? `<span>📍 ${meeting.location}</span>` : ''
+            ].join('');
 
             // Generar HTML de Documentos (Formato Fichero)
             let documentsHtml = '';
@@ -189,12 +212,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 galleryHtml = `<div class="meeting-gallery"><a href="#" onclick="openLightbox('${meeting._id}', 0, event)"><img src="images/ubicacion_1.png" alt="${meeting.title}" class="gallery-img" loading="lazy" decoding="async"></a></div>`;
             }
 
-            const cardHtml = `
-                <div class="meeting-card animate-up">
+            const mediaHtml = meeting.video ? `
+                <div class="meeting-media-featured">
+                    <video controls preload="none" playsinline poster="${meeting.poster}" aria-label="Reel: ${meeting.title}">
+                        <source src="${meeting.video}" type="video/mp4">
+                        Tu navegador no admite la reproducción de video.
+                    </video>
                     ${galleryHtml}
+                </div>
+            ` : galleryHtml;
+
+            const cardHtml = `
+                <div class="meeting-card${meeting.video ? ' meeting-card-featured' : ''} animate-up">
+                    ${mediaHtml}
                     <div class="meeting-info">
                         <div class="meeting-meta">
-                            <span>📅 ${dateStr}</span>
+                            ${meetingMeta}
                         </div>
                         <h3>${meeting.title}</h3>
                         <p class="meeting-desc clamp-text">${meeting.description}</p>
@@ -204,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
             
-            if (meetingDate < now) {
+            if (!meetingDate || meetingDate < now) {
                 if (pastContainer) pastContainer.innerHTML += cardHtml;
             } else {
                 if (upcomingContainer) upcomingContainer.innerHTML += cardHtml;
